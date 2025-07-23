@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { Badge } from "@/components/ui/badge"
+import { Logo } from "@/components/logo"
 import {
   Zap,
   Shield,
@@ -95,20 +96,18 @@ export default function LandingPage() {
   }
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-background">
       {/* Navigation */}
       <nav
         className={`border-b transition-all duration-300 sticky top-0 z-50 ${
-          isScrolled ? "bg-white/95 backdrop-blur-md shadow-sm" : "bg-white/80 backdrop-blur-sm border-gray-100"
+          isScrolled ? "bg-background/95 backdrop-blur-md shadow-sm" : "bg-background/80 backdrop-blur-sm border-border"
         }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             {/* Logo */}
             <div className="flex items-center cursor-pointer" onClick={() => scrollToSection("hero")}>
-              <div className="w-8 h-8 bg-gradient-to-br from-teal-500 to-teal-700 rounded-lg flex items-center justify-center shadow-lg">
-                <span className="text-white font-bold text-sm">Q</span>
-              </div>
+              <Logo size="md" className="shadow-lg" />
               <span className="ml-2 text-xl font-semibold text-gray-900">QuantaFlow</span>
             </div>
 
@@ -116,29 +115,29 @@ export default function LandingPage() {
             <div className="hidden md:flex items-center space-x-8">
               <button
                 onClick={() => scrollToSection("features")}
-                className="text-gray-600 hover:text-teal-600 transition-colors"
+                className="text-gray-600 hover:text-blue-900 transition-colors"
               >
                 Features
               </button>
               <button
                 onClick={() => scrollToSection("pricing")}
-                className="text-gray-600 hover:text-teal-600 transition-colors"
+                className="text-gray-600 hover:text-blue-900 transition-colors"
               >
                 Pricing
               </button>
               <button
                 onClick={() => scrollToSection("testimonials")}
-                className="text-gray-600 hover:text-teal-600 transition-colors"
+                className="text-gray-600 hover:text-blue-900 transition-colors"
               >
                 Testimonials
               </button>
               <button
                 onClick={() => scrollToSection("contact")}
-                className="text-gray-600 hover:text-teal-600 transition-colors"
+                className="text-gray-600 hover:text-blue-900 transition-colors"
               >
                 Contact
               </button>
-              <Button variant="outline" className="border-teal-200 text-teal-700 hover:bg-teal-50 bg-transparent">
+              <Button variant="outline" className="border-blue-200 text-blue-900 hover:bg-blue-50 bg-transparent">
                 Login
               </Button>
             </div>
@@ -154,32 +153,32 @@ export default function LandingPage() {
             <div className="md:hidden border-t border-gray-100 py-4 space-y-4">
               <button
                 onClick={() => scrollToSection("features")}
-                className="block w-full text-left px-4 py-2 text-gray-600 hover:text-teal-600"
+                className="block w-full text-left px-4 py-2 text-gray-600 hover:text-blue-900"
               >
                 Features
               </button>
               <button
                 onClick={() => scrollToSection("pricing")}
-                className="block w-full text-left px-4 py-2 text-gray-600 hover:text-teal-600"
+                className="block w-full text-left px-4 py-2 text-gray-600 hover:text-blue-900"
               >
                 Pricing
               </button>
               <button
                 onClick={() => scrollToSection("testimonials")}
-                className="block w-full text-left px-4 py-2 text-gray-600 hover:text-teal-600"
+                className="block w-full text-left px-4 py-2 text-gray-600 hover:text-blue-900"
               >
                 Testimonials
               </button>
               <button
                 onClick={() => scrollToSection("contact")}
-                className="block w-full text-left px-4 py-2 text-gray-600 hover:text-teal-600"
+                className="block w-full text-left px-4 py-2 text-gray-600 hover:text-blue-900"
               >
                 Contact
               </button>
               <div className="px-4">
                 <Button
                   variant="outline"
-                  className="w-full border-teal-200 text-teal-700 hover:bg-teal-50 bg-transparent"
+                  className="w-full border-blue-200 text-blue-900 hover:bg-blue-50 bg-transparent"
                 >
                   Login
                 </Button>
@@ -190,10 +189,10 @@ export default function LandingPage() {
       </nav>
 
       {/* Hero Section */}
-      <section id="hero" className="relative overflow-hidden bg-gradient-to-br from-gray-50 via-white to-teal-50">
+      <section id="hero" className="relative overflow-hidden bg-gradient-to-br from-background via-card to-blue-50">
         {/* Animated Background Elements */}
         <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute -top-40 -right-40 w-80 h-80 bg-teal-100 rounded-full opacity-20 animate-pulse"></div>
+          <div className="absolute -top-40 -right-40 w-80 h-80 bg-blue-100 rounded-full opacity-20 animate-pulse"></div>
           <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-blue-100 rounded-full opacity-20 animate-pulse delay-1000"></div>
         </div>
 
@@ -201,12 +200,12 @@ export default function LandingPage() {
           <div className="grid lg:grid-cols-2 gap-8 items-center">
             {/* Left Column - Text Content */}
             <div className="text-center lg:text-left">
-              <Badge className="mb-3 bg-teal-100 text-teal-800 hover:bg-teal-200 text-xs">
+              <Badge className="mb-3 bg-blue-100 text-blue-900 hover:bg-blue-200 text-xs">
                 🚀 Now with AI-powered insights
               </Badge>
               <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 leading-tight">
                 Data at the Speed of{" "}
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-600 to-blue-600">
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-900 to-blue-600">
                   Thought
                 </span>
               </h1>
@@ -219,7 +218,7 @@ export default function LandingPage() {
               <div className="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start mb-6">
                 <Button
                   size="lg"
-                  className="bg-gradient-to-r from-teal-600 to-teal-700 hover:from-teal-700 hover:to-teal-800 text-white px-6 py-3 text-base font-semibold rounded-lg shadow-lg hover:shadow-xl transition-all duration-200 group"
+                  className="bg-gradient-to-r from-blue-900 to-blue-950 hover:from-blue-950 hover:to-blue-950 text-white px-6 py-3 text-base font-semibold rounded-lg shadow-lg hover:shadow-xl transition-all duration-200 group"
                   onClick={() => scrollToSection("pricing")}
                 >
                   Start Free Trial
@@ -228,7 +227,7 @@ export default function LandingPage() {
                 <Button
                   variant="outline"
                   size="lg"
-                  className="border-2 border-gray-300 hover:border-teal-300 px-6 py-3 text-base font-semibold rounded-lg group bg-transparent"
+                  className="border-2 border-gray-300 hover:border-blue-300 px-6 py-3 text-base font-semibold rounded-lg group bg-transparent"
                   onClick={startDemo}
                 >
                   <Play className="mr-2 w-4 h-4 group-hover:scale-110 transition-transform" />
@@ -243,7 +242,7 @@ export default function LandingPage() {
                     {[1, 2, 3, 4].map((i) => (
                       <div
                         key={i}
-                        className="w-6 h-6 rounded-full bg-gradient-to-br from-teal-400 to-blue-500 border-2 border-white"
+                        className="w-6 h-6 rounded-full bg-gradient-to-br from-blue-700 to-blue-500 border-2 border-white"
                       ></div>
                     ))}
                   </div>
@@ -301,7 +300,7 @@ export default function LandingPage() {
                           <p className="text-xs text-gray-600">Conversion</p>
                           <p className="text-lg font-bold text-gray-900">3.2%</p>
                         </div>
-                        <Activity className="w-5 h-5 text-teal-500" />
+                        <Activity className="w-5 h-5 text-blue-800" />
                       </div>
                       <div className="flex items-center mt-1">
                         <TrendingDown className="w-3 h-3 text-red-500 mr-1" />
@@ -327,11 +326,11 @@ export default function LandingPage() {
                   {/* Compact Chart */}
                   <div className="bg-gray-50 rounded-lg p-3">
                     <h4 className="text-sm font-semibold text-gray-900 mb-2">Revenue Trend</h4>
-                    <div className="h-16 bg-gradient-to-r from-teal-50 to-blue-50 rounded flex items-end justify-between p-2">
+                    <div className="h-16 bg-gradient-to-r from-blue-50 to-blue-50 rounded flex items-end justify-between p-2">
                       {[65, 78, 82, 88, 95, 92, 98].map((height, index) => (
                         <div
                           key={index}
-                          className="bg-gradient-to-t from-teal-500 to-teal-400 rounded-t transition-all duration-500"
+                          className="bg-gradient-to-t from-blue-800 to-blue-700 rounded-t transition-all duration-500"
                           style={{
                             height: `${height * 0.6}%`,
                             width: "10%",
@@ -342,7 +341,7 @@ export default function LandingPage() {
                   </div>
 
                   {/* Compact AI Insights */}
-                  <div className="mt-3 p-3 bg-gradient-to-r from-teal-50 to-blue-50 rounded-lg">
+                  <div className="mt-3 p-3 bg-gradient-to-r from-blue-50 to-blue-50 rounded-lg">
                     <h4 className="text-sm font-semibold text-gray-900 mb-1">🤖 AI Insights</h4>
                     <ul className="text-xs text-gray-700 space-y-0.5">
                       <li>• Revenue growth accelerating (+12.5%)</li>
@@ -354,7 +353,7 @@ export default function LandingPage() {
               </div>
 
               {/* Compact Floating Elements */}
-              <div className="absolute -top-2 -right-2 bg-teal-500 text-white px-2 py-1 rounded-full text-xs font-medium shadow-lg animate-bounce">
+              <div className="absolute -top-2 -right-2 bg-blue-800 text-white px-2 py-1 rounded-full text-xs font-medium shadow-lg animate-bounce">
                 Live Demo
               </div>
               <div className="absolute -bottom-2 -left-2 bg-white border border-gray-200 px-3 py-1 rounded-lg shadow-lg">
@@ -417,22 +416,22 @@ export default function LandingPage() {
 
                   {/* Video Progress Indicator */}
                   <div className="absolute bottom-0 left-0 right-0 h-1 bg-gray-600">
-                    <div className="h-full bg-teal-500 w-1/3 transition-all duration-1000"></div>
+                    <div className="h-full bg-blue-800 w-1/3 transition-all duration-1000"></div>
                   </div>
                 </div>
 
                 {/* Video Stats */}
                 <div className="mt-6 grid grid-cols-3 gap-4">
                   <div className="bg-gray-800 rounded-lg p-4 text-center">
-                    <div className="text-2xl font-bold text-teal-400">2.3M</div>
+                    <div className="text-2xl font-bold text-blue-700">2.3M</div>
                     <div className="text-sm text-gray-400">Records Processed</div>
                   </div>
                   <div className="bg-gray-800 rounded-lg p-4 text-center">
-                    <div className="text-2xl font-bold text-teal-400">0.3s</div>
+                    <div className="text-2xl font-bold text-blue-700">0.3s</div>
                     <div className="text-sm text-gray-400">Query Response</div>
                   </div>
                   <div className="bg-gray-800 rounded-lg p-4 text-center">
-                    <div className="text-2xl font-bold text-teal-400">99.9%</div>
+                    <div className="text-2xl font-bold text-blue-700">99.9%</div>
                     <div className="text-sm text-gray-400">Accuracy Rate</div>
                   </div>
                 </div>
@@ -488,8 +487,8 @@ export default function LandingPage() {
                       className={`p-4 rounded-lg border-2 transition-all duration-300 cursor-pointer ${
                         step.active
                           ? step.completed
-                            ? "border-teal-500 bg-teal-500 bg-opacity-10"
-                            : "border-teal-400 bg-teal-400 bg-opacity-5"
+                            ? "border-blue-800 bg-blue-800 bg-opacity-10"
+                            : "border-blue-700 bg-blue-700 bg-opacity-5"
                           : "border-gray-600 bg-gray-800"
                       }`}
                       onClick={() => setDemoStep(index)}
@@ -498,9 +497,9 @@ export default function LandingPage() {
                         <div
                           className={`w-8 h-8 rounded-full flex items-center justify-center mr-4 ${
                             step.completed
-                              ? "bg-teal-500 text-white"
+                              ? "bg-blue-800 text-white"
                               : step.active
-                                ? "bg-teal-400 text-gray-900"
+                                ? "bg-blue-700 text-white"
                                 : "bg-gray-600 text-gray-400"
                           }`}
                         >
@@ -517,7 +516,7 @@ export default function LandingPage() {
 
                 <Button
                   onClick={nextDemoStep}
-                  className="w-full bg-teal-600 hover:bg-teal-700 text-white py-3"
+                  className="w-full bg-blue-900 hover:bg-blue-950 text-white py-3"
                   disabled={demoStep >= 3}
                 >
                   {demoStep >= 3 ? "Demo Complete!" : "Next Step"}
@@ -525,12 +524,12 @@ export default function LandingPage() {
                 </Button>
 
                 {/* Demo CTA */}
-                <div className="mt-8 p-6 bg-gradient-to-r from-teal-600 to-blue-600 rounded-lg">
+                <div className="mt-8 p-6 bg-gradient-to-r from-blue-900 to-blue-600 rounded-lg">
                   <h4 className="text-xl font-bold mb-2">Ready to try it yourself?</h4>
-                  <p className="text-teal-100 mb-4">Start your free trial and experience the power of QuantaFlow</p>
+                  <p className="text-blue-100 mb-4">Start your free trial and experience the power of QuantaFlow</p>
                   <Button
                     onClick={() => scrollToSection("pricing")}
-                    className="bg-white text-teal-600 hover:bg-gray-100"
+                    className="bg-white text-blue-900 hover:bg-gray-100"
                   >
                     Start Free Trial
                   </Button>
@@ -542,7 +541,7 @@ export default function LandingPage() {
       )}
 
       {/* Feature Highlights */}
-      <section id="features" className="py-24 bg-white">
+      <section id="features" className="py-24 bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Powerful Features for Modern Teams</h2>
@@ -555,8 +554,8 @@ export default function LandingPage() {
             {/* AI-Powered */}
             <Card className="border-0 shadow-lg hover:shadow-xl transition-all duration-300 group hover:-translate-y-2">
               <CardContent className="p-8 text-center">
-                <div className="w-16 h-16 bg-gradient-to-br from-teal-100 to-teal-200 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform">
-                  <Brain className="w-8 h-8 text-teal-600" />
+                <div className="w-16 h-16 bg-gradient-to-br from-blue-100 to-blue-200 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform">
+                  <Brain className="w-8 h-8 text-blue-900" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">AI-Powered Analytics</h3>
                 <p className="text-gray-600 leading-relaxed mb-6">
@@ -565,15 +564,15 @@ export default function LandingPage() {
                 </p>
                 <ul className="text-sm text-gray-500 space-y-2">
                   <li className="flex items-center">
-                    <Check className="w-4 h-4 text-teal-500 mr-2" />
+                    <Check className="w-4 h-4 text-blue-800 mr-2" />
                     Automated pattern recognition
                   </li>
                   <li className="flex items-center">
-                    <Check className="w-4 h-4 text-teal-500 mr-2" />
+                    <Check className="w-4 h-4 text-blue-800 mr-2" />
                     Predictive analytics
                   </li>
                   <li className="flex items-center">
-                    <Check className="w-4 h-4 text-teal-500 mr-2" />
+                    <Check className="w-4 h-4 text-blue-800 mr-2" />
                     Natural language queries
                   </li>
                 </ul>
@@ -583,8 +582,8 @@ export default function LandingPage() {
             {/* Secure */}
             <Card className="border-0 shadow-lg hover:shadow-xl transition-all duration-300 group hover:-translate-y-2">
               <CardContent className="p-8 text-center">
-                <div className="w-16 h-16 bg-gradient-to-br from-teal-100 to-teal-200 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform">
-                  <Shield className="w-8 h-8 text-teal-600" />
+                <div className="w-16 h-16 bg-gradient-to-br from-blue-100 to-blue-200 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform">
+                  <Shield className="w-8 h-8 text-blue-900" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">Enterprise Security</h3>
                 <p className="text-gray-600 leading-relaxed mb-6">
@@ -593,15 +592,15 @@ export default function LandingPage() {
                 </p>
                 <ul className="text-sm text-gray-500 space-y-2">
                   <li className="flex items-center">
-                    <Check className="w-4 h-4 text-teal-500 mr-2" />
+                    <Check className="w-4 h-4 text-blue-800 mr-2" />
                     End-to-end encryption
                   </li>
                   <li className="flex items-center">
-                    <Check className="w-4 h-4 text-teal-500 mr-2" />
+                    <Check className="w-4 h-4 text-blue-800 mr-2" />
                     SOC 2 Type II certified
                   </li>
                   <li className="flex items-center">
-                    <Check className="w-4 h-4 text-teal-500 mr-2" />
+                    <Check className="w-4 h-4 text-blue-800 mr-2" />
                     Role-based access control
                   </li>
                 </ul>
@@ -611,8 +610,8 @@ export default function LandingPage() {
             {/* Lightning Fast */}
             <Card className="border-0 shadow-lg hover:shadow-xl transition-all duration-300 group hover:-translate-y-2">
               <CardContent className="p-8 text-center">
-                <div className="w-16 h-16 bg-gradient-to-br from-teal-100 to-teal-200 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform">
-                  <Zap className="w-8 h-8 text-teal-600" />
+                <div className="w-16 h-16 bg-gradient-to-br from-blue-100 to-blue-200 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform">
+                  <Zap className="w-8 h-8 text-blue-900" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">Lightning Fast</h3>
                 <p className="text-gray-600 leading-relaxed mb-6">
@@ -621,15 +620,15 @@ export default function LandingPage() {
                 </p>
                 <ul className="text-sm text-gray-500 space-y-2">
                   <li className="flex items-center">
-                    <Check className="w-4 h-4 text-teal-500 mr-2" />
+                    <Check className="w-4 h-4 text-blue-800 mr-2" />
                     Sub-second query response
                   </li>
                   <li className="flex items-center">
-                    <Check className="w-4 h-4 text-teal-500 mr-2" />
+                    <Check className="w-4 h-4 text-blue-800 mr-2" />
                     Auto-scaling infrastructure
                   </li>
                   <li className="flex items-center">
-                    <Check className="w-4 h-4 text-teal-500 mr-2" />
+                    <Check className="w-4 h-4 text-blue-800 mr-2" />
                     99.99% uptime SLA
                   </li>
                 </ul>
@@ -651,7 +650,7 @@ export default function LandingPage() {
 
           <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
             {/* Starter Plan */}
-            <Card className="border-2 border-gray-200 hover:border-teal-300 transition-colors">
+            <Card className="border-2 border-gray-200 hover:border-blue-300 transition-colors">
               <CardContent className="p-8">
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">Starter</h3>
                 <p className="text-gray-600 mb-6">Perfect for small teams getting started</p>
@@ -661,18 +660,18 @@ export default function LandingPage() {
                 </div>
                 <ul className="space-y-3 mb-8">
                   <li className="flex items-center">
-                    <Check className="w-5 h-5 text-teal-500 mr-3" />
+                    <Check className="w-5 h-5 text-blue-800 mr-3" />
                     Up to 100K records/month
                   </li>
                   <li className="flex items-center">
-                    <Check className="w-5 h-5 text-teal-500 mr-3" />5 team members
+                    <Check className="w-5 h-5 text-blue-800 mr-3" />5 team members
                   </li>
                   <li className="flex items-center">
-                    <Check className="w-5 h-5 text-teal-500 mr-3" />
+                    <Check className="w-5 h-5 text-blue-800 mr-3" />
                     Basic analytics
                   </li>
                   <li className="flex items-center">
-                    <Check className="w-5 h-5 text-teal-500 mr-3" />
+                    <Check className="w-5 h-5 text-blue-800 mr-3" />
                     Email support
                   </li>
                 </ul>
@@ -683,9 +682,9 @@ export default function LandingPage() {
             </Card>
 
             {/* Professional Plan */}
-            <Card className="border-2 border-teal-500 relative shadow-lg">
+            <Card className="border-2 border-blue-800 relative shadow-lg">
               <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                <Badge className="bg-teal-500 text-white px-4 py-1">Most Popular</Badge>
+                <Badge className="bg-blue-800 text-white px-4 py-1">Most Popular</Badge>
               </div>
               <CardContent className="p-8">
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">Professional</h3>
@@ -696,32 +695,32 @@ export default function LandingPage() {
                 </div>
                 <ul className="space-y-3 mb-8">
                   <li className="flex items-center">
-                    <Check className="w-5 h-5 text-teal-500 mr-3" />
+                    <Check className="w-5 h-5 text-blue-800 mr-3" />
                     Up to 1M records/month
                   </li>
                   <li className="flex items-center">
-                    <Check className="w-5 h-5 text-teal-500 mr-3" />
+                    <Check className="w-5 h-5 text-blue-800 mr-3" />
                     25 team members
                   </li>
                   <li className="flex items-center">
-                    <Check className="w-5 h-5 text-teal-500 mr-3" />
+                    <Check className="w-5 h-5 text-blue-800 mr-3" />
                     Advanced AI analytics
                   </li>
                   <li className="flex items-center">
-                    <Check className="w-5 h-5 text-teal-500 mr-3" />
+                    <Check className="w-5 h-5 text-blue-800 mr-3" />
                     Priority support
                   </li>
                   <li className="flex items-center">
-                    <Check className="w-5 h-5 text-teal-500 mr-3" />
+                    <Check className="w-5 h-5 text-blue-800 mr-3" />
                     Custom integrations
                   </li>
                 </ul>
-                <Button className="w-full bg-teal-600 hover:bg-teal-700">Start Free Trial</Button>
+                <Button className="w-full bg-blue-900 hover:bg-blue-950">Start Free Trial</Button>
               </CardContent>
             </Card>
 
             {/* Enterprise Plan */}
-            <Card className="border-2 border-gray-200 hover:border-teal-300 transition-colors">
+            <Card className="border-2 border-gray-200 hover:border-blue-300 transition-colors">
               <CardContent className="p-8">
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">Enterprise</h3>
                 <p className="text-gray-600 mb-6">For large organizations with custom needs</p>
@@ -730,23 +729,23 @@ export default function LandingPage() {
                 </div>
                 <ul className="space-y-3 mb-8">
                   <li className="flex items-center">
-                    <Check className="w-5 h-5 text-teal-500 mr-3" />
+                    <Check className="w-5 h-5 text-blue-800 mr-3" />
                     Unlimited records
                   </li>
                   <li className="flex items-center">
-                    <Check className="w-5 h-5 text-teal-500 mr-3" />
+                    <Check className="w-5 h-5 text-blue-800 mr-3" />
                     Unlimited team members
                   </li>
                   <li className="flex items-center">
-                    <Check className="w-5 h-5 text-teal-500 mr-3" />
+                    <Check className="w-5 h-5 text-blue-800 mr-3" />
                     White-label solution
                   </li>
                   <li className="flex items-center">
-                    <Check className="w-5 h-5 text-teal-500 mr-3" />
+                    <Check className="w-5 h-5 text-blue-800 mr-3" />
                     Dedicated support
                   </li>
                   <li className="flex items-center">
-                    <Check className="w-5 h-5 text-teal-500 mr-3" />
+                    <Check className="w-5 h-5 text-blue-800 mr-3" />
                     On-premise deployment
                   </li>
                 </ul>
@@ -801,7 +800,7 @@ export default function LandingPage() {
                   </div>
                   <p className="text-gray-600 mb-6 italic">"{testimonial.content}"</p>
                   <div className="flex items-center">
-                    <div className="w-12 h-12 bg-gradient-to-br from-teal-400 to-blue-500 rounded-full flex items-center justify-center text-white font-semibold mr-4">
+                    <div className="w-12 h-12 bg-gradient-to-br from-blue-700 to-blue-500 rounded-full flex items-center justify-center text-white font-semibold mr-4">
                       {testimonial.name
                         .split(" ")
                         .map((n) => n[0])
@@ -850,7 +849,7 @@ export default function LandingPage() {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="py-24 bg-gradient-to-br from-teal-50 to-blue-50">
+      <section id="contact" className="py-24 bg-gradient-to-br from-blue-50 to-blue-50">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Ready to Get Started?</h2>
@@ -898,12 +897,12 @@ export default function LandingPage() {
                     id="message"
                     rows={4}
                     placeholder="Tell us about your data challenges..."
-                    className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-teal-500 focus:border-teal-500"
+                    className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-800 focus:border-blue-800"
                   />
                 </div>
                 <Button
                   type="submit"
-                  className="w-full bg-gradient-to-r from-teal-600 to-teal-700 hover:from-teal-700 hover:to-teal-800 text-white py-3 text-lg font-semibold"
+                  className="w-full bg-gradient-to-r from-blue-900 to-blue-950 hover:from-blue-950 hover:to-blue-950 text-white py-3 text-lg font-semibold"
                   disabled={isSubmitted}
                 >
                   {isSubmitted ? (
@@ -931,9 +930,7 @@ export default function LandingPage() {
             {/* Company Info */}
             <div className="md:col-span-2">
               <div className="flex items-center mb-4">
-                <div className="w-8 h-8 bg-gradient-to-br from-teal-500 to-teal-700 rounded-lg flex items-center justify-center">
-                  <span className="text-white font-bold text-sm">Q</span>
-                </div>
+                <Logo size="md" />
                 <span className="ml-2 text-xl font-semibold">QuantaFlow</span>
               </div>
               <p className="text-gray-400 mb-6 max-w-md">
@@ -944,7 +941,7 @@ export default function LandingPage() {
                 {["Twitter", "LinkedIn", "GitHub"].map((social) => (
                   <div
                     key={social}
-                    className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-teal-600 transition-colors cursor-pointer"
+                    className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-blue-900 transition-colors cursor-pointer"
                   >
                     <span className="text-sm">{social[0]}</span>
                   </div>
