@@ -51,7 +51,7 @@ export function DemoDashboard() {
             onClick={() => setIsLive(!isLive)}
             size="sm"
             variant={isLive ? "destructive" : "default"}
-            className={`text-xs px-2 py-1 h-6 ${isLive ? "bg-red-500 hover:bg-red-600" : "bg-teal-600 hover:bg-teal-700"}`}
+            className={`text-xs px-2 py-1 h-6 ${isLive ? "bg-red-500 hover:bg-red-600" : "bg-blue-900 hover:bg-blue-950"}`}
           >
             {isLive ? "Stop" : "Go Live"}
           </Button>
@@ -98,7 +98,7 @@ export function DemoDashboard() {
                 <p className="text-xs text-gray-600">Conversion</p>
                 <p className="text-lg font-bold text-gray-900">{data.conversion.toFixed(1)}%</p>
               </div>
-              <Activity className="w-5 h-5 text-teal-500" />
+              <Activity className="w-5 h-5 text-blue-800" />
             </div>
             <div className="flex items-center mt-1">
               <TrendingDown className="w-3 h-3 text-red-500 mr-1" />
@@ -130,11 +130,11 @@ export function DemoDashboard() {
           <CardTitle className="text-sm">Revenue Trend</CardTitle>
         </CardHeader>
         <CardContent className="pt-0">
-          <div className="h-16 bg-gradient-to-r from-teal-50 to-blue-50 rounded flex items-end justify-between p-2">
+          <div className="h-16 bg-gradient-to-r from-blue-50 to-blue-100 rounded flex items-end justify-between p-2">
             {[65, 78, 82, 88, 95, 92, 98].map((height, index) => (
               <div
                 key={index}
-                className="bg-gradient-to-t from-teal-500 to-teal-400 rounded-t transition-all duration-500"
+                className="bg-gradient-to-t from-blue-800 to-blue-700 rounded-t transition-all duration-500"
                 style={{
                   height: `${height * 0.6}%`,
                   width: "10%",
@@ -147,7 +147,7 @@ export function DemoDashboard() {
       </Card>
 
       {/* Compact AI Insights */}
-      <div className="p-3 bg-gradient-to-r from-teal-50 to-blue-50 rounded-lg">
+      <div className="p-3 bg-gradient-to-r from-blue-50 to-blue-100 rounded-lg">
         <h4 className="text-sm font-semibold text-gray-900 mb-1">🤖 AI Insights</h4>
         <ul className="text-xs text-gray-700 space-y-0.5">
           <li>• Revenue growth accelerating (+12.5% vs last month)</li>
